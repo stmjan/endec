@@ -27,6 +27,7 @@ def generate_decrypted_filename(input_file: str) -> str:
 
 def clean_filename(filename: str) -> str:
     """Removes unnecessary quotes from filenames caused by drag-and-drop."""
+    filename = filename.strip("'")
     return filename.strip('"')
 
 def encrypt_file(input_file: str, password: str):
